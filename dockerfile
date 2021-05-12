@@ -1,8 +1,3 @@
-From ubuntu:20.04
+FROM apache/zeppelin:0.9.0
 
-LABEL maintainer='NQ'
-
-RUN apt update -y
-RUN apt upgrade -y
-RUN mkdir -p /srv
-RUN cd /srv
+RUN pip install pyspark==2.4.6 great_expectations
